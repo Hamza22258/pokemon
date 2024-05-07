@@ -3,24 +3,53 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.3",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.5.2",
-    "@types/node": "^16.18.96",
-    "@types/react": "^18.3.1",
-    "@types/react-dom": "^18.3.0",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "@types/node": "^16.18.83",
+    "@types/react": "^18.2.58",
+    "@types/react-dom": "^18.2.19",
+    "bootstrap": "^5.3.3",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.10.2",
+    "react-dom": "^18.2.0",
+    "react-query": "^3.39.3",
+    "react-redux": "^9.1.1",
+    "react-router-dom": "^6.22.3",
     "react-scripts": "5.0.1",
+    "react-table": "^7.8.0",
+    "redux-mock-store": "^1.5.4",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.5",
+    "@babel/preset-env": "^7.24.5",
+    "@babel/preset-typescript": "^7.24.1",
+    "@types/redux-mock-store": "^1.0.6",
+    "babel-jest": "^29.7.0",
+    "eslint-plugin-react": "^7.34.1",
+    "husky": "^9.0.11",
+    "jest-watch-typeahead": "^0.6.5",
+    "lint-staged": "^15.2.2",
+    "ts-jest": "^29.1.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run pre-commit"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": "eslint --fix"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "pre-commit": "npx eslint src --ext .ts,.tsx,.js,.jsx --quiet"
   },
   "eslintConfig": {
     "extends": [
